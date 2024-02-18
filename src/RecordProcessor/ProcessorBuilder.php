@@ -49,15 +49,11 @@ class ProcessorBuilder implements LoggerAwareInterface
         return $this;
     }
 
-    public function setLogger(LoggerInterface $logger = null)
+    public function setLogger(LoggerInterface $logger = null): void
     {
-        if (is_null($logger)) {
-            return $this;
-        }
+        if (is_null($logger)) return;
 
         $this->logger = $logger;
-
-        return $this;
     }
 
     protected function getLogger()
